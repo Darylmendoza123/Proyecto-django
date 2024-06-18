@@ -58,22 +58,56 @@
 
 		<!-- Barra de menú -->
 		<div class="sidebar">
+
+			<!-- Imagen de usuario -->
+
+			<div class="user-menu dropdown">
+				<a href="#">
+					<img src="{%block imagen%}{%endblock%}">
+					<div class="user-info">
+						{%block Nombre%}{%endblock%} <span>DSM</span>
+					</div>
+				</a>
+			</div>
+
 			<div class="sidebar-content">
 				<!-- Menú de navegación -->
 				<ul class="navigation">
 							<li><a href="{%url 'Principal'%}">Principal</a></li>
-							<li><a href="{%url 'Contacto'%}">Registrar</a></li>
+							<li><a href="{%url 'Contacto'%}">Contacto</a></li>
                             <li><a href="{%url 'Formulario'%}">Formulario</a></li>				
 				</ul>
 				<!-- /Fin menú -->
 			</div>
 		</div>
 		<!-- /sidebar -->
+		
 
 
+		<div class="page-content">
+
+			{%block encabezado%}{%endblock%} 
+			
+			<!--Barra de navegacion 2-->
+			<div class="breadcrumb-line">
+				<ul class="breadcrumb">
+					
+					<a href="{%url 'Principal'%}">
+						{%if request.path == '/'%}
+							Principal
+						{%else%}
+							Principal{{request.path}}
+						{%endif%}
+	
+				</ul>
+		</div>
+		
 		{%block contenido%}
 
         {% endblock %}
+
+			
+
 	</div>
 </body>
 </html>

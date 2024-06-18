@@ -1,23 +1,29 @@
 {% extends "inicio/encabezado.html" %}
 
 {%block titulo%}Contacto {%endblock%}
+{%block Nombre%}Contacto {%endblock%}
+{%block imagen%}
+    {%load static%}
+ {%static 'inicio/images/Contacto.png'%}
+ {%endblock%}
 
+
+ {%block encabezado%} <div class="page-header">
+    <div class="page-title">
+        <h3>Contacto
+        <small>Mandanos tus dudas</small></h3>
+        
+    </div> 
+</div>{%endblock%}
 {%block contenido%}
-<h2>Contacto</h> 
+
   	<!-- Contenido Principal-->
-      <div class="page-content">
+      
 
 
         <!--Encabezdo -->
-        <div class="page-header">
-            <div class="page-title">
-                <h3>Contacto
-                <small>Mandanos tus dudas</small></h3>
-            </div>
-
-            
-            
-        </div>
+       
+       
         <!-- /Encabezado-->
 
         <!-- Formulario -->
@@ -47,7 +53,7 @@
             </div>
         </form>
     <!-- Fin del Formulario -->
-    </div>
+   
     <!-- /Contenido Principal-->
 
  {%endblock%}
